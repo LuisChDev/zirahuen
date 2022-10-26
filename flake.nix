@@ -11,11 +11,15 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          android_sdk.accept_license = true;
+          config = {
+            android_sdk.accept_license = true;
+          };
         };
+
       in {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [ androidenv.androidPkgs_9_0.androidsdk ];
+
         };
       });
 }

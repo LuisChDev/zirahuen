@@ -1,0 +1,3 @@
+* zirahuen setup on WSL 2
+you need to run the given script in an administrator-privileged Power-Shell
+prompt after starting up Expo.
